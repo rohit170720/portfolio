@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <section className='flex flex-col items-center justify-center h-screen text-center'>
       <Image
-        src='/ProfileImage.png'
+        src='./ProfileImage.png'
         alt='Rohit Renke'
         height={200}
         width={200}
