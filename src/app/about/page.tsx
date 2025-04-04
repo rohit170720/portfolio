@@ -15,7 +15,7 @@ export default function About() {
           className='w-full md:w-1/3 flex justify-center '
         >
           <Image
-            src='/ProfileImage.png'
+            src='./ProfileImage.png'
             alt='Rohit Renke'
             width={300}
             height={300}
