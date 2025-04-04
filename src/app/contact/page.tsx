@@ -6,8 +6,8 @@ const ContactSection = () => {
       <div className='max-w-4xl mx-auto px-4 text-center'>
         <h2 className='text-4xl font-bold  mb-4'>Let’s Connect!</h2>
         <p className='text-xl  mb-8'>
-          I'm always eager to discuss new projects, creative ideas, or
-          opportunities to collaborate. Drop me a line, and let's build
+          I&apos;m always eager to discuss new projects, creative ideas, or
+          opportunities to collaborate. Drop me a line, and let&apos;s build
           something remarkable together.
         </p>
         <a

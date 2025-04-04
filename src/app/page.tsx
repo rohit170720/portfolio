@@ -19,7 +19,7 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Hi, I'm Rohit Renke
+        Hi, I&apos;m Rohit Renke
       </motion.h1>
       <p className='text-gray-400 text-sm md:text-lg mt-4'>
         React & Next.js Developer | Frontend Engineer
