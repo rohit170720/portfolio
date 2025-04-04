@@ -11,7 +11,7 @@ const ContactSection = () => {
           something remarkable together.
         </p>
         <a
-          href='mailto:your-email@example.com'
+          href='mailto:rohitkrenke@gmail.com'
           className='inline-block px-8 py-4 text-lg font-medium border border-[#61dafb] text-[#61dafb] rounded-lg transition-colors duration-300 hover:bg-[#61dafb] hover:text-white'
         >
           Contact Me
