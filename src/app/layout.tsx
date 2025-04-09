@@ -1,13 +1,18 @@
-"use client";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { ReactNode } from "react";
+import Head from "next/head";
 
 type LayoutProps = {
   children: ReactNode;
 };
 
+export const metadata = {
+  title: "Rohit Renke - Portfolio", // Global title
+  description:
+    "Welcome to the portfolio of Rohit Renke, a front-end web developer.",
+};
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang='en'>
