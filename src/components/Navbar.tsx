@@ -1,13 +1,43 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import DarkModeToggle from "./DarkModeToggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 200) {
+        if (currentScrollY > lastScrollY) {
+          setIsVisible(false); // Hide Navbar when scrolling down
+        } else {
+          setIsVisible(true); // Show Navbar when scrolling up
+        }
+      } else {
+        setIsVisible(true); // Always show Navbar if scroll is less than 200px
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
 
   return (
-    <nav className='bg-[var(--bg-light)] text-[var(--text-light)] dark:bg-[var(--bg-dark)] dark:text-[var(--text-dark)] px-4 py-2 shadow-lg dark:shadow-gray-800'>
+    <nav
+      className={`bg-[var(--bg-light)] text-[var(--text-light)] dark:bg-[var(--bg-dark)] dark:text-[var(--text-dark)] px-4 py-2 shadow-lg dark:shadow-gray-800 sticky top-0 z-50 transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className='container mx-auto flex justify-between items-center'>
         {/* Logo / Brand */}
         <Link href='/'>
