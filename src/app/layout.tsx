@@ -2,7 +2,6 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { ReactNode } from "react";
-import Head from "next/head";
 
 type LayoutProps = {
   children: ReactNode;
