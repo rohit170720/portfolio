@@ -23,7 +23,7 @@ export const projects = [
     title: "Trello clone",
     description:
       "Trello clone for task management with draggable interface with Zustand and appwrite in Next.js.",
-    imageUrl: "./trelloclone.png",
+    imageUrl: "/portfolio/trelloclone.png",
     projectUrl: "https://trello-clone-seven-psi.vercel.app/",
   },
 ];

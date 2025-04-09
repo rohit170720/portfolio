@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className='flex flex-col items-center justify-center h-screen text-center'>
+    <section className='flex flex-col items-center justify-center min-h-[75vh] text-center'>
       <Image
-        src='./ProfileImage.png'
+        src='/portfolio/ProfileImage.png'
         alt='Rohit Renke'
         height={200}
         width={200}
